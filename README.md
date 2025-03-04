@@ -5,13 +5,16 @@ HA Proxy for Aleyant
 All files that have been touched, and their modifications
 
 conf/haproxy.cfg
+
 	Need to be moved to the right directory ./conf
 	Backend server 1 port changed to 80
 
 conf/crontab.txt
+
 	Missing new line before EOF
 
 web-server/Dockerfile
+
 	Simple Dockerfile created to support the backed webservers
 
 docker-compose.yml
@@ -33,6 +36,7 @@ docker-compose.yml
 
 
 Dockerfile
+
 	From busybox
 		Should be debian:10-slim as pointed on the comment, also busybox doesn’t have apt
 	
@@ -45,10 +49,11 @@ Dockerfile
 
 
 run.sh
+
 	Maybe not needed, since the lb is created on the docker-compose.yml
 	Doesn’t access relative path for the -v parameter
 	Missing network name
 	Adjust the exposed ports
 
 
-As a improvement, most of the hardcoded information could be passed as variables to avoid human errors, also to be able to use the same code in multiple environments.
+As an improvement, most of the hardcoded information could be passed as variables to avoid human errors, also to be able to use the same code in multiple environments.
